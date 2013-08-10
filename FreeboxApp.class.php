@@ -1,5 +1,5 @@
 <?php
-// for api list see "aide" dans la console freebox ou 
+// pour la liste des api voir "aide" dans la console freebox ou 
 //   http://dev.freebox.fr/sdk/
 class FreeboxApp {
 	private $url;
@@ -37,9 +37,6 @@ class FreeboxApp {
 			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "DELETE");
 		} elseif ($method=="PUT") {
 			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
-			//curl_setopt($ch, CURLOPT_PUT, true);
-			//curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($params));
-			//curl_setopt($ch, CURLOPT_HTTPHEADER, array('X-HTTP-Method-Override: PUT'));
 		}
 		if ($params)
 			curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($params));
