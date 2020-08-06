@@ -8,7 +8,7 @@ class FreeboxApp {
 	private $token=null;
 	private $sessionToken=null;
 	public $debug=false;
-	function __construct($appId, $token, $url="http://mafreebox.free.fr") {
+	function __construct($appId, $token, $url="http://mafreebox.freebox.fr") {
 		$this->url=$url;
 		$this->id=$appId;
 		$this->token=$token;
