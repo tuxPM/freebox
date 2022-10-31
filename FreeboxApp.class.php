@@ -38,7 +38,7 @@ class FreeboxApp {
 		} elseif ($method=="PUT") {
 			curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "PUT");
 		}
-		if ($params)
+		if ($params && $params !== "POST")
 			curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($params));
 		if ($this->sessionToken)
 			curl_setopt($ch, CURLOPT_HTTPHEADER, array("X-Fbx-App-Auth: $this->sessionToken"));
